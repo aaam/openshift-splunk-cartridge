@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
-[ x${-//i/} = x$- ] || exec 2>/dev/null
+# If not interactive calling shell
+[ x${-//i/} = x$- ] && exec 2>/dev/null
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
 # This location for Splunk needs to be updated if a new version is released
